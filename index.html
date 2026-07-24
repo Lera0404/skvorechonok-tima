@@ -1,45 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🐦 Помоги Скворчонку Тиме!</title>
+
+<title>🐦 Помоги Скворчонку Тиме</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div class="background"></div>
+
 <div class="container">
 
-<h1>🐦 Помоги Скворчонку Тиме!</h1>
+<header>
+
+<h1>🐦 Помоги Скворчонку Тиме</h1>
 
 <p class="subtitle">
-Весеннее путешествие по синтаксису • 5 класс
+
+Интерактивная игра по синтаксису • 5 класс
+
 </p>
 
-<div id="start">
+</header>
 
-<div class="intro">
+<!-- Старт -->
 
-<div class="bird">🐦</div>
+<section id="start" class="card">
 
-<p>
+<div class="bird">
+
+🐦
+
+</div>
+
+<h2>
+
+Весеннее приключение начинается!
+
+</h2>
+
+<p class="story">
+
 Скворчонок Тима прилетел домой после долгой зимы.
-Но сильный Весенний ветер перепутал все предложения.
-Помоги Тиме выполнить задания по синтаксису,
-собери слова для гнезда и помоги ему встретить свою семью!
+
+Но сильный ветер разбросал все веточки.
+
+Помоги Тиме ответить на вопросы по русскому языку,
+
+чтобы построить новое уютное гнездо.
+
 </p>
 
-<button class="main-btn" onclick="startGame()">
+<button class="mainButton" onclick="startGame()">
+
 🌸 Начать игру
+
 </button>
 
-</div>
+</section>
+
+<!-- Игра -->
+
+<section id="game" style="display:none;">
+
+<div class="topPanel">
+
+<div class="scoreBox">
+
+<div>
+
+⭐ Очки
 
 </div>
 
-<div id="game" style="display:none;">
+<div id="score">
+
+0
+
+</div>
+
+</div>
+
+<div class="progressBox">
+
+<div class="progressText">
+
+Вопрос
+
+<span id="counter">1</span>
+
+из
+
+<span id="total">15</span>
+
+</div>
 
 <div class="progress">
 
@@ -47,46 +109,94 @@
 
 </div>
 
-<div class="top">
-
-<div>
-⭐ Очки:
-<span id="score">0</span>
-</div>
-
-<div>
-📝
-<span id="counter">1</span> /
-<span id="total">5</span>
 </div>
 
 </div>
 
-<div id="question" class="question"></div>
+<div class="treeArea">
+
+<div id="tree">
+
+🌳
+
+</div>
+
+<div id="nest">
+
+🪹
+
+</div>
+
+</div>
+
+<div class="questionCard">
+
+<h2 id="question"></h2>
 
 <div id="answers"></div>
 
 </div>
 
-<div id="finish" class="finish">
+<div id="message" class="message"></div>
 
-<div class="bird big">
-🏆
+<div id="explanation" class="explanation"></div>
+
+<button
+
+id="nextButton"
+
+class="nextButton"
+
+style="display:none;"
+
+onclick="nextQuestion()">
+
+Следующий вопрос →
+
+</button>
+
+</section>
+
+<!-- Финал -->
+
+<section id="finish" class="card" style="display:none;">
+
+<div id="medal">
+
+🥇
+
 </div>
 
-<h2>Молодец!</h2>
+<h2>
+
+Поздравляем!
+
+</h2>
 
 <p id="result"></p>
 
-<button class="main-btn" onclick="restartGame()">
+<button
+
+class="mainButton"
+
+onclick="restartGame()">
+
 🔄 Играть ещё
+
 </button>
 
-</div>
+</section>
+
+<footer>
+
+© Скворчонок Тима • Русский язык • 5 класс
+
+</footer>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
