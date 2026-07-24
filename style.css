@@ -1,59 +1,332 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#dfffdc;
+background:linear-gradient(180deg,#b8e8ff,#e8f8ff,#dff8d8);
+min-height:100vh;
+color:#2c3e50;
+overflow-x:hidden;
+}
+
+.background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.7),transparent 15%),
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.5),transparent 15%),
+linear-gradient(#b8e8ff,#e8f8ff,#dff8d8);
 }
 
 .container{
-    max-width:700px;
-    margin:30px auto;
-    background:#fff;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+header{
+text-align:center;
+margin-bottom:25px;
 }
 
 h1{
-    color:#2e8b57;
-    text-align:center;
+font-size:42px;
+color:#228B22;
+margin-bottom:10px;
 }
 
-button{
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border:none;
-    border-radius:12px;
-    background:#49c16d;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
+.subtitle{
+font-size:20px;
+color:#4f6d4f;
 }
 
-button:hover{
-    background:#2f9c53;
+.card{
+background:white;
+border-radius:25px;
+padding:35px;
+box-shadow:0 12px 35px rgba(0,0,0,.15);
+text-align:center;
 }
 
-.answer{
-    background:white;
-    color:black;
-    border:2px solid #cfd8dc;
+.story{
+font-size:20px;
+line-height:1.8;
+margin:25px 0;
+}
+
+.bird{
+font-size:90px;
+animation:fly 2.2s ease-in-out infinite;
+}
+
+@keyframes fly{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-10px);}
+
+100%{transform:translateY(0);}
+
+}
+
+.mainButton,
+.nextButton{
+
+padding:15px 35px;
+font-size:19px;
+border:none;
+border-radius:40px;
+background:#43b047;
+color:white;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.mainButton:hover,
+.nextButton:hover{
+
+transform:scale(1.05);
+background:#2e8b57;
+
+}
+
+.topPanel{
+
+display:flex;
+gap:20px;
+align-items:center;
+margin-bottom:25px;
+
+}
+
+.scoreBox{
+
+width:140px;
+background:white;
+border-radius:18px;
+padding:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+#score{
+
+font-size:34px;
+font-weight:bold;
+color:#2e8b57;
+margin-top:10px;
+
+}
+
+.progressBox{
+
+flex:1;
+
+}
+
+.progressText{
+
+font-weight:bold;
+margin-bottom:8px;
+
 }
 
 .progress{
-    width:100%;
-    height:18px;
-    background:#ddd;
-    border-radius:10px;
-    overflow:hidden;
+
+height:20px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+
 }
 
-.bar{
-    height:100%;
-    width:0%;
-    background:#4caf50;
+#bar{
+
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#4caf50,#81c784);
+transition:.4s;
+
 }
-.finish{
-    display:none;
-    text-align:center;
+
+.treeArea{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+font-size:80px;
+margin:25px 0;
+
+}
+
+#nest{
+
+transition:.4s;
+
+}
+
+.questionCard{
+
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+#question{
+
+font-size:28px;
+margin-bottom:25px;
+
+}
+
+.answer{
+
+display:block;
+width:100%;
+margin:12px 0;
+padding:15px;
+font-size:18px;
+background:white;
+border:2px solid #ddd;
+border-radius:15px;
+cursor:pointer;
+transition:.25s;
+text-align:left;
+
+}
+
+.answer:hover{
+
+background:#f5fff5;
+border-color:#4caf50;
+
+}
+
+.correct{
+
+background:#d9ffd9 !important;
+border-color:#2e8b57 !important;
+
+}
+
+.wrong{
+
+background:#ffdede !important;
+border-color:#d32f2f !important;
+
+}
+
+.message{
+
+display:none;
+margin-top:20px;
+padding:18px;
+background:#eefbe9;
+border-left:6px solid #43b047;
+border-radius:12px;
+font-size:20px;
+font-weight:bold;
+
+}
+
+.explanation{
+
+display:none;
+margin-top:15px;
+padding:18px;
+background:#fff8dc;
+border-left:6px solid orange;
+border-radius:12px;
+line-height:1.7;
+font-size:18px;
+
+}
+
+.nextButton{
+
+display:block;
+margin:25px auto 0;
+
+}
+
+#finish{
+
+text-align:center;
+
+}
+
+#medal{
+
+font-size:120px;
+margin-bottom:20px;
+
+}
+
+#result{
+
+font-size:22px;
+line-height:1.8;
+
+}
+
+footer{
+
+margin-top:30px;
+text-align:center;
+font-size:14px;
+color:#666;
+
+}
+
+@media(max-width:700px){
+
+.topPanel{
+
+flex-direction:column;
+
+}
+
+.scoreBox{
+
+width:100%;
+
+}
+
+.treeArea{
+
+font-size:55px;
+gap:20px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+#question{
+
+font-size:22px;
+
+}
+
+.story{
+
+font-size:18px;
+
+}
+
 }
