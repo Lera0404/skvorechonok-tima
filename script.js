@@ -1,12 +1,12 @@
-// ===============================
-// Помоги Скворчонку Тиме 3.0
-// Часть 1
-// ===============================
+// =====================================
+// 🐦 Помоги Скворчонку Тиме 6.0
+// =====================================
+
+// ------------ Вопросы ------------
 
 const questions = [
-
 {
-q:"Что такое простое предложение?",
+question:"Что такое простое предложение?",
 answers:[
 "Предложение с одной грамматической основой",
 "Любое длинное предложение",
@@ -15,42 +15,18 @@ answers:[
 correct:0,
 explanation:"Простое предложение имеет одну грамматическую основу."
 },
-
 {
-q:"Что является грамматической основой?",
+question:"Что является грамматической основой?",
 answers:[
 "Подлежащее и сказуемое",
 "Дополнение и определение",
-"Любые два слова"
+"Любые слова"
 ],
 correct:0,
 explanation:"Грамматическая основа состоит из подлежащего и сказуемого."
 },
-
 {
-q:"Найди грамматическую основу: «Птицы поют».",
-answers:[
-"Птицы",
-"Поют",
-"Птицы поют"
-],
-correct:2,
-explanation:"Основа состоит из двух главных членов: «птицы поют»."
-},
-
-{
-q:"Какое предложение является вопросительным?",
-answers:[
-"Весна пришла.",
-"Когда прилетят скворцы?",
-"Берегите птиц!"
-],
-correct:1,
-explanation:"Вопросительное предложение содержит вопрос."
-},
-
-{
-q:"Выбери сложное предложение.",
+question:"Выбери сложное предложение.",
 answers:[
 "Солнце светит.",
 "Солнце светит, и птицы поют.",
@@ -59,64 +35,38 @@ answers:[
 correct:1,
 explanation:"В сложном предложении две грамматические основы."
 },
-
 {
-q:"Найди определение.",
+question:"Какое предложение является вопросительным?",
 answers:[
-"зелёная трава",
-"трава",
-"растёт"
-],
-correct:0,
-explanation:"Определение отвечает на вопросы какой? какая? какое?"
-},
-
-{
-q:"Какое предложение является побудительным?",
-answers:[
-"Открой окно!",
-"Окно открыто.",
-"Когда открыть окно?"
-],
-correct:0,
-explanation:"Побудительное предложение выражает просьбу или приказ."
-},
-
-{
-q:"Какой знак поставить: «Как красиво весной»",
-answers:[
-".",
-"!",
-"?"
+"Весна пришла.",
+"Когда прилетят птицы?",
+"Берегите птиц!"
 ],
 correct:1,
-explanation:"Восклицательное предложение заканчивается знаком '!'."
+explanation:"Вопросительное предложение содержит вопрос."
 },
-
 {
-q:"Сколько грамматических основ в простом предложении?",
+question:"Найди грамматическую основу: «Птицы поют».",
 answers:[
-"Одна",
-"Две",
-"Три"
+"Птицы",
+"Поют",
+"Птицы поют"
 ],
-correct:0,
-explanation:"В простом предложении всегда одна грамматическая основа."
+correct:2,
+explanation:"Основа состоит из подлежащего и сказуемого."
 },
-
 {
-q:"Что обозначает сказуемое?",
+question:"Что обозначает сказуемое?",
 answers:[
 "Предмет",
-"Действие или состояние",
-"Признак предмета"
+"Действие",
+"Признак"
 ],
 correct:1,
-explanation:"Сказуемое обозначает действие или состояние подлежащего."
+explanation:"Сказуемое обозначает действие."
 },
-
 {
-q:"Найди подлежащее.",
+question:"Найди подлежащее.",
 answers:[
 "летят",
 "птицы",
@@ -125,20 +75,8 @@ answers:[
 correct:1,
 explanation:"Подлежащее отвечает на вопрос «кто?»."
 },
-
 {
-q:"Что обозначает подлежащее?",
-answers:[
-"Действие",
-"Предмет речи",
-"Признак"
-],
-correct:1,
-explanation:"Подлежащее обозначает предмет речи."
-},
-
-{
-q:"Как называется предложение с второстепенными членами?",
+question:"Как называется предложение с второстепенными членами?",
 answers:[
 "Распространённое",
 "Нераспространённое",
@@ -147,42 +85,87 @@ answers:[
 correct:0,
 explanation:"Распространённое предложение содержит второстепенные члены."
 },
-
 {
-q:"Нераспространённое предложение — это...",
+question:"Что изучает синтаксис?",
 answers:[
-"Только грамматическая основа",
-"Любое короткое предложение",
-"Предложение без сказуемого"
+"Предложения",
+"Звуки",
+"Буквы"
 ],
 correct:0,
-explanation:"Нераспространённое предложение состоит только из основы."
+explanation:"Синтаксис изучает словосочетания и предложения."
 },
-
 {
-q:"Какой раздел языка изучает предложение?",
+question:"Какой знак ставится в конце вопросительного предложения?",
 answers:[
-"Синтаксис",
-"Фонетика",
-"Лексика"
+".",
+"!",
+"?"
+],
+correct:2,
+explanation:"Вопросительное предложение заканчивается знаком вопроса."
+},
+{
+question:"Что обозначает подлежащее?",
+answers:[
+"Предмет речи",
+"Действие",
+"Признак"
 ],
 correct:0,
-explanation:"Предложения изучает раздел русского языка «Синтаксис»."
+explanation:"Подлежащее обозначает предмет речи."
+},
+{
+question:"Какое предложение является побудительным?",
+answers:[
+"Закрой окно!",
+"Окно закрыто.",
+"Когда закрыть окно?"
+],
+correct:0,
+explanation:"Побудительное предложение выражает просьбу или приказ."
+},
+{
+question:"Сколько грамматических основ в простом предложении?",
+answers:[
+"Одна",
+"Две",
+"Три"
+],
+correct:0,
+explanation:"В простом предложении одна грамматическая основа."
+},
+{
+question:"Найди простое предложение.",
+answers:[
+"Птицы прилетели.",
+"Птицы прилетели, и деревья зазеленели.",
+"Солнце выглянуло, ветер стих."
+],
+correct:0,
+explanation:"В простом предложении одна основа."
+},
+{
+question:"Сколько вопросов в этой игре?",
+answers:[
+"15",
+"20",
+"10"
+],
+correct:0,
+explanation:"В игре 15 вопросов."
 }
-
 ];
 
-const phrases = [
-"🐦 Спасибо! Ещё одна веточка!",
-"🌸 Ты отлично справляешься!",
-"🪺 Гнездо становится уютнее!",
-"⭐ Молодец!",
-"🌿 Скоро прилетит моя семья!",
-"🍃 Замечательная работа!",
-"🐦 Ты настоящий помощник!",
-"🌼 Продолжаем!",
-"🌞 Великолепно!",
-"💚 Спасибо за помощь!"
+const phrases=[
+"🐦 Отлично!",
+"🌸 Молодец!",
+"🌿 Замечательно!",
+"🪺 Гнездо становится крепче!",
+"⭐ Великолепно!",
+"🍃 Продолжаем!",
+"🐤 Тима рад!",
+"🌼 Так держать!"
 ];
 
 const nestStages=[
@@ -195,13 +178,15 @@ const nestStages=[
 "🪺🐦"
 ];
 
-let order=[];
-let current=0;
+let currentQuestion=0;
 let score=0;
+let gameQuestions=[];
 
-// ===============================
-// Часть 2 — логика игры
-// ===============================
+// =====================================
+// Служебные функции
+// =====================================
+
+// Перемешивание массива (Fisher–Yates)
 
 function shuffle(array){
 
@@ -217,25 +202,87 @@ return array;
 
 }
 
+// Перемешивание ответов с сохранением правильного
+
+function prepareQuestions(){
+
+gameQuestions=questions.map(q=>{
+
+let answers=q.answers.map((text,index)=>({
+
+text:text,
+
+correct:index===q.correct
+
+}));
+
+shuffle(answers);
+
+return{
+
+question:q.question,
+
+answers:answers,
+
+correct:answers.findIndex(a=>a.correct),
+
+explanation:q.explanation
+
+};
+
+});
+
+shuffle(gameQuestions);
+
+}
+
+// =====================================
+// Запуск игры
+// =====================================
+
 function startGame(){
 
-document.getElementById("start").style.display="none";
+prepareQuestions();
 
-document.getElementById("game").style.display="block";
-
-order=shuffle([...questions.keys()]);
-
-current=0;
+currentQuestion=0;
 
 score=0;
 
-document.getElementById("score").textContent=score;
+document.getElementById("score").textContent=0;
+
+document.getElementById("total").textContent=
+gameQuestions.length;
+
+document.getElementById("start").style.display="none";
+
+document.getElementById("finish").style.display="none";
+
+document.getElementById("game").style.display="block";
 
 showQuestion();
 
 }
 
+// =====================================
+// Показ вопроса
+// =====================================
+
 function showQuestion(){
+
+const q=gameQuestions[currentQuestion];
+
+document.getElementById("current").textContent=
+currentQuestion+1;
+
+document.getElementById("question").textContent=
+q.question;
+
+document.getElementById("bar").style.width=
+(currentQuestion/gameQuestions.length*100)+"%";
+
+const answers=document.getElementById("answers");
+
+answers.innerHTML="";
 
 document.getElementById("message").style.display="none";
 
@@ -243,28 +290,13 @@ document.getElementById("explanation").style.display="none";
 
 document.getElementById("nextButton").style.display="none";
 
-const q=questions[order[current]];
-
-document.getElementById("counter").textContent=current+1;
-
-document.getElementById("total").textContent=questions.length;
-
-document.getElementById("bar").style.width=
-((current)/questions.length*100)+"%";
-
-document.getElementById("question").textContent=q.q;
-
-const answers=document.getElementById("answers");
-
-answers.innerHTML="";
-
-q.answers.forEach((text,index)=>{
+q.answers.forEach((answer,index)=>{
 
 const btn=document.createElement("button");
 
 btn.className="answer";
 
-btn.textContent=text;
+btn.textContent=answer.text;
 
 btn.onclick=()=>checkAnswer(index);
 
@@ -276,13 +308,23 @@ updateNest();
 
 }
 
+// =====================================
+// Проверка ответа
+// =====================================
+
 function checkAnswer(index){
 
-const q=questions[order[current]];
+const q=gameQuestions[currentQuestion];
 
 const buttons=document.querySelectorAll(".answer");
 
-buttons.forEach(b=>b.disabled=true);
+// защита от повторного нажатия
+
+buttons.forEach(button=>button.disabled=true);
+
+const message=document.getElementById("message");
+
+const explanation=document.getElementById("explanation");
 
 if(index===q.correct){
 
@@ -292,7 +334,8 @@ score+=10;
 
 document.getElementById("score").textContent=score;
 
-document.getElementById("message").textContent=
+message.textContent=
+
 phrases[Math.floor(Math.random()*phrases.length)];
 
 }else{
@@ -301,31 +344,32 @@ buttons[index].classList.add("wrong");
 
 buttons[q.correct].classList.add("correct");
 
-document.getElementById("message").textContent=
-"🐦 Ничего страшного! Попробуем дальше!";
+message.textContent=
+
+"🐦 Ничего страшного! Продолжаем!";
 
 }
 
-document.getElementById("message").style.display="block";
+message.style.display="block";
 
-document.getElementById("explanation").textContent=
+explanation.textContent=
+
 "📖 "+q.explanation;
 
-document.getElementById("explanation").style.display="block";
+explanation.style.display="block";
 
 document.getElementById("nextButton").style.display="block";
 
 }
-
-// ===============================
-// Часть 3 — финал игры
-// ===============================
+// =====================================
+// Следующий вопрос
+// =====================================
 
 function nextQuestion(){
 
-current++;
+currentQuestion++;
 
-if(current<questions.length){
+if(currentQuestion<gameQuestions.length){
 
 showQuestion();
 
@@ -337,15 +381,31 @@ finishGame();
 
 }
 
-function updateNest(){
+// =====================================
+// Обновление гнезда
+// =====================================
 
-const stage=Math.floor(current/2);
+function updateNest(){
 
 const nest=document.getElementById("nest");
 
-nest.textContent=nestStages[Math.min(stage,nestStages.length-1)];
+const progress=currentQuestion/(gameQuestions.length-1);
+
+const stage=Math.min(
+
+Math.floor(progress*nestStages.length),
+
+nestStages.length-1
+
+);
+
+nest.textContent=nestStages[stage];
 
 }
+
+// =====================================
+// Завершение игры
+// =====================================
 
 function finishGame(){
 
@@ -359,60 +419,56 @@ const medal=document.getElementById("medal");
 
 const result=document.getElementById("result");
 
-const percent=Math.round(score/(questions.length*10)*100);
+const maxScore=gameQuestions.length*10;
 
-if(score>=130){
+const percent=Math.round(score/maxScore*100);
+
+if(percent>=90){
 
 medal.textContent="🥇";
 
 result.innerHTML=
+"🐦 Скворчонок Тима построил прекрасное гнездо!<br><br>"+
+"⭐ Ты набрал <b>"+score+"</b> из "+maxScore+" баллов.<br>"+
+"🏆 Правильных ответов: <b>"+percent+"%</b><br><br>"+
+"🌸 Великолепный результат!";
 
-"🐦 Скворчонок Тима построил великолепное гнездо!<br><br>"+
-
-"⭐ Ты набрал <b>"+score+"</b> баллов из 150.<br>"+
-
-"🏆 Результат: <b>"+percent+"%</b><br><br>"+
-
-"🌸 Отличный результат! Ты настоящий знаток синтаксиса!";
-
-}
-
-else if(score>=90){
+}else if(percent>=70){
 
 medal.textContent="🥈";
 
 result.innerHTML=
-
-"🐦 Тима благодарит тебя за помощь!<br><br>"+
-
-"⭐ Ты набрал <b>"+score+"</b> баллов из 150.<br>"+
-
-"🏆 Результат: <b>"+percent+"%</b><br><br>"+
-
+"🐦 Гнездо почти готово!<br><br>"+
+"⭐ Ты набрал <b>"+score+"</b> из "+maxScore+" баллов.<br>"+
+"🏆 Правильных ответов: <b>"+percent+"%</b><br><br>"+
 "🍃 Очень хороший результат!";
 
-}
-
-else{
+}else{
 
 medal.textContent="🥉";
 
 result.innerHTML=
-
-"🐦 Гнездо почти готово!<br><br>"+
-
-"⭐ Ты набрал <b>"+score+"</b> баллов из 150.<br>"+
-
-"🏆 Результат: <b>"+percent+"%</b><br><br>"+
-
-"🌱 Попробуй пройти игру ещё раз и улучшить результат!";
+"🐦 Тима благодарит тебя за помощь!<br><br>"+
+"⭐ Ты набрал <b>"+score+"</b> из "+maxScore+" баллов.<br>"+
+"🏆 Правильных ответов: <b>"+percent+"%</b><br><br>"+
+"🌱 Попробуй пройти игру ещё раз!";
 
 }
 
 }
+
+// =====================================
+// Играть ещё
+// =====================================
 
 function restartGame(){
 
-location.reload();
+currentQuestion=0;
+
+score=0;
+
+document.getElementById("finish").style.display="none";
+
+document.getElementById("start").style.display="block";
 
 }
