@@ -1,3 +1,4 @@
+
 *{
 margin:0;
 padding:0;
@@ -118,11 +119,16 @@ gap:15px;
 }
 
 .answer{
+display:block;
+width:100%;
 padding:15px;
+background:#ffffff;
+color:#000000;
 border:2px solid #ddd;
-background:white;
 border-radius:15px;
 font-size:18px;
+font-weight:500;
+text-align:left;
 cursor:pointer;
 transition:.25s;
 }
@@ -130,20 +136,25 @@ transition:.25s;
 .answer:hover{
 background:#f1fff1;
 border-color:#4caf50;
+color:#000000;
 }
 
 .answer:disabled{
 cursor:default;
+opacity:1;
+color:#000000;
 }
 
 .correct{
-background:#d9ffd9!important;
-border-color:#2e8b57!important;
+background:#d9ffd9 !important;
+border-color:#2e8b57 !important;
+color:#000000 !important;
 }
 
 .wrong{
-background:#ffdcdc!important;
-border-color:#d32f2f!important;
+background:#ffdcdc !important;
+border-color:#d32f2f !important;
+color:#000000 !important;
 }
 
 .message{
