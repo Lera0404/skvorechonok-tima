@@ -53,3 +53,7 @@ button:hover{
     width:0%;
     background:#4caf50;
 }
+.finish{
+    display:none;
+    text-align:center;
+}
